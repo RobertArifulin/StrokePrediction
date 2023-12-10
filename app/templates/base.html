@@ -1,0 +1,115 @@
+<script>
+	function clickHandler(id) {
+		if (document.getElementsByClassName("active")[0] != undefined) {
+			document.getElementsByClassName("active")[0].classList.remove('active');
+		}
+		document.getElementById(id).classList.add('active');
+	} 
+</script>
+
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Stroke Prediction</title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="topnav">
+                <a id="home" href="/" on:click="clickHandler(home)">Home</a>
+                <a id="hypothesis" href="/hypothesis" on:click="clickHandler(hypothesis)">Hypothesis</a>
+                <a id="data" href="/data" on:click="clickHandler(data)">Data</a>
+            </div>
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    .main {
+        background-color: #ffffff;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .content {
+        margin: 8px;
+    }
+
+	.text {
+		display: flex;
+		font-size: 23px;
+		font-family: sans-serif;
+		align-items: center;
+		color: #fff;
+	}
+	.indiv {
+		display: flex;
+		padding: 21px 32px;
+	}
+
+	.btn {
+		border: none;
+		border-radius: 10px;
+        position: relative;
+        bottom: 2px;
+		font-size: 20px;
+		flex-wrap: wrap;
+        /* margin-top: 20px; */
+		margin-left: 10px;
+		padding: 7px 15px;
+		color: white;
+		background: #0B63F6;
+    	box-shadow: 0 5px 0 #003CC5;
+	}
+		
+
+	.btn:active {
+		background: #003CC5;
+		box-shadow: none;
+		position: relative;
+		top: 5px;
+	}
+
+	.topnav {
+		display: flex;
+		align-content: center;
+		align-items: center;
+        justify-content: center;
+		background-color: #7186ff;
+		overflow: hidden;
+		height: 60px;
+	}
+
+	.topnav a {
+		display: flex;
+		float: left;
+		color: #ffffff;
+		font-family: sans-serif;
+		text-align: center;
+		align-items: center;
+		align-self:stretch;
+		padding: 0px 32px;
+		text-decoration: none;
+		font-size: 23px;
+	}
+
+
+	.topnav a:hover {
+		background-color: #ffffff;
+ 		color: black;
+	}
+
+	.topnav a.active {
+		background-color: #0015ff;
+		color: white;
+	}
+
+</style>

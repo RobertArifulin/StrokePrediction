@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Data</h1>
+<form name="column" method="post" action="">
+    date<input name = "date" type = "text" class="text">
+    Column name<br/>
+    <input name="column"> </input>
+    <input name="" type="submit" value="Отправить"/>
+</form>
+
+{% for table in tables %}
+    {{ table|safe }}
+{% endfor %}
+
+<style>
+
+    div.welcome h1{
+        text-align: center;
+        text-transform: uppercase;
+        color: #1343df;
+    }
+
+    div.welcome p {
+        padding: 5px;
+        text-indent: 50px;
+        text-align: justify;
+        font-family: 'Raleway',sans-serif;
+    }
+
+    div.welcome a {
+        text-decoration: none;
+        color: #008CBA;
+    }
+
+</style>
+{% endblock %}
+

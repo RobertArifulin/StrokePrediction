@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="welcome"> 
+    <h1>Welcome</h1>
+    <p>This is my website for the python project</p>
+    <p>
+    <a target="_blank" href="https://github.com/RobertArifulin/StrokePrediction">My GitHub</a> 
+    </p>
+    <p>
+    <a target="_blank" href="https://braindamage.streamlit.app/">My Streamlit</a> 
+    </p>
+    <p>
+    <a target="_blank" href="">My website</a> 
+    </p>
+</div>
+<style>
+
+    div.welcome h1{
+        text-align: center;
+        text-transform: uppercase;
+        color: #1343df;
+    }
+
+    div.welcome p {
+        padding: 5px;
+        text-indent: 50px;
+        text-align: justify;
+        font-family: 'Raleway',sans-serif;
+    }
+
+    div.welcome a {
+        text-decoration: none;
+        color: #008CBA;
+    }
+
+</style>
+{% endblock %}
+
