@@ -17,7 +17,7 @@ def charts():
     corr_features = ["age", "hypertension" , "heart_disease", "avg_glucose_level", "bmi", "stroke"]
     corr_selection = st.multiselect("Select features", corr_features, corr_features[-3:])
     corr_matrix = df[corr_selection].corr()
-    plt.figure(figsize=(12, 8))
+    g = plt.figure(figsize=(12, 8))
     sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
     # st.set_option('deprecation.showPyplotGlobalUse', False)
-    st.pyplot()
+    st.pyplot(g)
